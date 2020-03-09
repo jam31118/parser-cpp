@@ -1,0 +1,6 @@
+# Spatial configuration
+Nx int 21
+dx double 0.2
+
+# Temporal configuration
+dt double 0.05
