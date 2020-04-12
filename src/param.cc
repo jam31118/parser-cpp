@@ -77,6 +77,9 @@ ParamFile::ParamFile(const char *filename) {
 					<< it->name << std::endl; 
 				throw e;
 			}
+#ifdef DEBUG
+			std::cout << "[ LOG ] int val == " << val << "\n";
+#endif // DEBUG 
 			params_int[it->name] = val;
 		} else if (it->type == "double") {
 			double val;
@@ -86,6 +89,9 @@ ParamFile::ParamFile(const char *filename) {
 					<< it->name << std::endl;
 				throw e;
 			}
+#ifdef DEBUG
+			std::cout << "[ LOG ] double val == " << val << "\n";
+#endif // DEBUG 
 			params_double[it->name] = val;
 		} else if (it->type == "long") {
 			long val;
@@ -95,6 +101,9 @@ ParamFile::ParamFile(const char *filename) {
 					<< it->name << std::endl;
 				throw e;
 			}
+#ifdef DEBUG
+			std::cout << "[ LOG ] long val == " << val << "\n";
+#endif // DEBUG 
 			params_long[it->name] = val;
 		}
 		else if ((it->type == "string") || (it->type == "str")) {
